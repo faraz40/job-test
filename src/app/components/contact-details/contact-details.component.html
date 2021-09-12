@@ -1,4 +1,7 @@
-<div class="details-container">
+<div
+  class="details-container"
+  *ngIf="this.contactSvc.contactDetails['image_url']"
+>
   <!-- contact main info -->
   <div fxLayout="row" class="contact_info">
     <img
@@ -88,23 +91,13 @@
     </div>
 
     <div class="margin-top-1">
-      <span fxFlex="15">Social</span>
-      <div fxFlex="85" class="social-links">
-        <button>
-          <span class="material-icons"> phone </span>
-        </button>
-        <button>
-          <i class="bi bi-facebook"></i>
-        </button>
-        <button>
-          <span class="material-icons"> call </span>
-        </button>
-        <button>
-          <span class="material-icons"> call </span>
-        </button>
-        <button>
-          <span class="material-icons"> call </span>
-        </button>
+      <span class="sub-heading" fxFlex="15">Social</span>
+      <div fxFlex="85" class="social-links" fxLayoutGap="5px">
+        <button><i class="fa fa-facebook"></i></button>
+        <button><i class="fa fa-pinterest"></i></button>
+        <button><i class="fa fa-twitter"></i></button>
+        <button><i class="fa fa-linkedin"></i></button>
+        <button><i class="fa fa-google"></i></button>
       </div>
     </div>
   </div>

@@ -12,8 +12,8 @@ export class ContactsService extends BaseService {
     super(http);
   }
   apiRoot: string = `https://6139e9371fcce10017e78ca3.mockapi.io/api/v1/`;
-  sel_contact_id = null;
   contactDetails = {
+    id: '',
     image_url: '',
     firstName: '',
     lastName: '',

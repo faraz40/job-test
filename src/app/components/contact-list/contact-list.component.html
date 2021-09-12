@@ -1,9 +1,8 @@
-<i class="bi bi-align-start"></i>
 <div fxLayout="row">
   <div class="main-container">
     <div fxLayout="row" class="header-section">
       <div fxLayoutAlign="start center">
-        <button class="header-btns">
+        <button class="header-btns margin-left-2">
           <span class="material-icons"> menu </span>
         </button>
         <h3 class="contacts-header">Contacts</h3>
@@ -21,7 +20,7 @@
 
     <hr class="header-line" />
 
-    <div class="contact-list">
+    <div class="contact-list" *ngIf="contactsList.length">
       <p class="search-para">Search for a contact</p>
 
       <div fxLayoutAlign="space-between center">
@@ -50,7 +49,12 @@
           </div>
         </div>
 
-        <div class="contact-btns" fxLayout="row" fxLayoutGap="10px">
+        <div
+          class="contact-btns"
+          fxLayout="row"
+          fxLayoutGap="10px"
+          [class.active-item]="item['id'] == contactSvc.contactDetails['id']"
+        >
           <button><span class="material-icons"> question_answer </span></button>
           <button><span class="material-icons"> call </span></button>
           <button><span class="material-icons"> more_vert </span></button>

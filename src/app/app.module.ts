@@ -7,6 +7,7 @@ import { ContactDetailsComponent } from './components/contact-details/contact-de
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 @NgModule({
   declarations: [AppComponent, ContactListComponent, ContactDetailsComponent],
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FlexLayoutModule,
     HttpClientModule,
+    NgHttpLoaderModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

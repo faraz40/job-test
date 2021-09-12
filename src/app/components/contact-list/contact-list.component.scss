@@ -1,10 +1,10 @@
 .main-container {
-  // @media screen and (min-width: 600px) {
-  //   width: 45vw;
-  // }
-  // @media screen and (max-width: 599px) {
-  //   width: 100vw;
-  // }
+  @media screen and (min-width: 600px) {
+    width: 50vw;
+  }
+  @media screen and (max-width: 599px) {
+    width: 100vw;
+  }
   background: #faf9ff;
   .header-section {
     margin: 1rem;
@@ -12,15 +12,16 @@
   button {
     cursor: pointer;
   }
-
+  .margin-left-2 {
+    margin-left: 2rem;
+  }
   .header-btns {
     width: 40px;
     height: 40px;
     background: #ffffff;
     border: 1px solid #eceef5;
-    box-sizing: border-box;
     border-radius: 10px;
-    margin-left: 2rem;
+
     .material-icons {
       font-size: 18px;
       color: #8083a3;
@@ -64,6 +65,13 @@
     .contact-items {
       padding-top: 1rem;
       padding-bottom: 1rem;
+
+      .active-item > button {
+        .material-icons {
+          color: #6b59cc !important;
+        }
+      }
+
       p {
         margin: 0;
       }

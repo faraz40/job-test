@@ -1,0 +1,119 @@
+.details-container {
+  background: #fff;
+  margin: 3rem;
+  @media screen and (min-width: 600px) {
+    width: 55vw;
+  }
+  @media screen and (max-width: 599px) {
+    width: 100vw;
+  }
+  .contact_info {
+    margin: 2rem;
+    .contact_img {
+      border-radius: 26px;
+      width: 114px;
+      height: 114px;
+    }
+    .main-details {
+      margin-left: 2rem;
+
+      p {
+        margin: 0;
+      }
+      .name {
+        font-family: Lato;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 32px;
+        color: #1a1c1d;
+      }
+
+      .profession {
+        font-size: 14px;
+        line-height: 21px;
+        color: #8083a3;
+      }
+
+      .contact-btns {
+        margin-top: 1rem;
+        .msg-btn {
+          width: 122px;
+          height: 42px;
+          background: #6b59cc;
+          border-radius: 10px;
+          border: none;
+          cursor: pointer;
+          .text {
+            font-family: Lato;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            color: #ffffff;
+          }
+          .material-icons {
+            color: #fafbff;
+            font-size: 18px;
+            line-height: 18px;
+          }
+        }
+        button:not(:first-child) {
+          background: #ffffff;
+          border: 1px solid #eceef5;
+          box-sizing: border-box;
+          border-radius: 10px;
+          width: 42px;
+          height: 42px;
+          cursor: pointer;
+        }
+        .material-icons {
+          font-size: 18px;
+          line-height: 18px;
+          color: #8083a3;
+        }
+      }
+    }
+  }
+
+  .more-details {
+    .sub-heading {
+      font-family: Lato;
+      font-size: 14px;
+      line-height: 21px;
+      color: #8083a3;
+    }
+    p {
+      font-family: Lato;
+      font-size: 14px;
+      line-height: 21px;
+      color: #1a1c1d;
+      margin: 0;
+    }
+
+    .primary-chip {
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      color: #8083a3;
+      width: 76px;
+      height: 28px;
+      background: #f3f4f9;
+      border-radius: 8px;
+    }
+    .margin-top-1 {
+      margin-top: 1rem;
+    }
+    .social-links {
+      button {
+        background: #ffffff;
+        border: 1px solid #eceef5;
+        box-sizing: border-box;
+        border-radius: 10px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+      }
+    }
+  }
+}

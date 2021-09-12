@@ -1,0 +1,109 @@
+.main-container {
+  // @media screen and (min-width: 600px) {
+  //   width: 45vw;
+  // }
+  // @media screen and (max-width: 599px) {
+  //   width: 100vw;
+  // }
+  background: #faf9ff;
+  .header-section {
+    margin: 1rem;
+  }
+  button {
+    cursor: pointer;
+  }
+
+  .header-btns {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #eceef5;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 2rem;
+    .material-icons {
+      font-size: 18px;
+      color: #8083a3;
+    }
+  }
+  .contacts-header {
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    color: #1a1c1d;
+    margin-left: 1rem;
+  }
+  .header-line {
+    border: 1px solid #eceef5;
+    box-sizing: border-box;
+  }
+
+  .search-para {
+    font-family: Lato;
+    font-size: 14px;
+    color: #8083a3;
+    margin-top: 1.5rem;
+  }
+  .header-2 {
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1a1c1d;
+    margin: 0;
+  }
+
+  .contact-list {
+    margin: 2rem;
+    .material-icons {
+      font-size: 18px;
+      color: #1d1d24;
+    }
+
+    .contact-items {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      p {
+        margin: 0;
+      }
+      .name {
+        font-family: Lato;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        color: #1a1c1d;
+      }
+      .profession {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 21px;
+        color: #8083a3;
+      }
+      img {
+        border-radius: 10px;
+      }
+      .contact-btns > button {
+        background: #ffffff;
+        border: 1px solid #eceef5;
+        box-sizing: border-box;
+        border-radius: 10px;
+        width: 36px;
+        height: 36px;
+        .material-icons {
+          font-size: 18px;
+          line-height: 18px;
+          color: #8083a3;
+        }
+      }
+    }
+
+    .contact-items:hover {
+      border: 1px solid skyblue;
+      border-radius: 10px;
+      background: white;
+      cursor: pointer;
+      padding: 1rem;
+    }
+  }
+}

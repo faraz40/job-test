@@ -1,0 +1,63 @@
+<i class="bi bi-align-start"></i>
+<div fxLayout="row">
+  <div class="main-container">
+    <div fxLayout="row" class="header-section">
+      <div fxLayoutAlign="start center">
+        <button class="header-btns">
+          <span class="material-icons"> menu </span>
+        </button>
+        <h3 class="contacts-header">Contacts</h3>
+      </div>
+
+      <div fxLayoutAlign="end center" fxLayoutGap="5px">
+        <button class="header-btns">
+          <span class="material-icons"> navigate_before </span>
+        </button>
+        <button class="header-btns">
+          <span class="material-icons"> navigate_next </span>
+        </button>
+      </div>
+    </div>
+
+    <hr class="header-line" />
+
+    <div class="contact-list">
+      <p class="search-para">Search for a contact</p>
+
+      <div fxLayoutAlign="space-between center">
+        <p class="header-2">Name, email or phone number</p>
+        <span class="material-icons"> search </span>
+      </div>
+
+      <!-- contact list starts here -->
+
+      <div
+        *ngFor="let item of contactsList"
+        class="contact-items"
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        (click)="viewContactDetails(item)"
+      >
+        <div fxLayout="row" fxLayoutGap="20px">
+          <img src="{{ item['image_url'] }} " height="36" width="36" />
+          <div fxLayout="column">
+            <p class="name" fxFlexAlign="start">
+              {{ item["firstName"] + item["lastName"] }}
+            </p>
+            <p class="profession" fxFlexAlign="start">
+              {{ item["profession"] }}
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-btns" fxLayout="row" fxLayoutGap="10px">
+          <button><span class="material-icons"> question_answer </span></button>
+          <button><span class="material-icons"> call </span></button>
+          <button><span class="material-icons"> more_vert </span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-contact-details></app-contact-details>
+</div>

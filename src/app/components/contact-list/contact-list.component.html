@@ -1,18 +1,18 @@
-<div fxLayout="row">
-  <div class="main-container">
-    <div fxLayout="row" class="header-section">
-      <div fxLayoutAlign="start center">
-        <button class="header-btns margin-left-2">
+<div class="row">
+  <div id="main-container" class="col-sm-12 col-md-5">
+    <div class="row header-section">
+      <div class="col-8">
+        <button class="header-btns">
           <span class="material-icons"> menu </span>
         </button>
-        <h3 class="contacts-header">Contacts</h3>
+        <span class="contacts-header">Contacts</span>
       </div>
 
-      <div fxLayoutAlign="end center" fxLayoutGap="5px">
+      <div class="col-4 d-flex justify-content-end">
         <button class="header-btns">
           <span class="material-icons"> navigate_before </span>
         </button>
-        <button class="header-btns">
+        <button class="ms-1 header-btns">
           <span class="material-icons"> navigate_next </span>
         </button>
       </div>
@@ -63,5 +63,10 @@
     </div>
   </div>
 
-  <app-contact-details></app-contact-details>
+  <div
+    class="col-sm-12 col-md-7 details-container"
+    *ngIf="this.contactSvc.contactDetails['image_url']"
+  >
+    <app-contact-details></app-contact-details>
+  </div>
 </div>

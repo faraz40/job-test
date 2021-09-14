@@ -40,6 +40,11 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
       })
     );
   }
+  backToContactsList(): void {
+    this.contactSvc.contactDetails['image_url'] = '';
+    let main: any = document.getElementById('main-container');
+    main['style']['display'] = 'block';
+  }
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }

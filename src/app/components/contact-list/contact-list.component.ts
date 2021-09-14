@@ -43,6 +43,11 @@ export class ContactListComponent implements OnInit, OnDestroy {
     this.contactSvc.contactDetails['firstName'] = item['firstName'];
     this.contactSvc.contactDetails['lastName'] = item['lastName'];
     this.contactSvc.contactDetails['profession'] = item['profession'];
+
+    if (window.innerWidth < 768) {
+      let main: any = document.getElementById('main-container');
+      main['style']['display'] = 'none';
+    }
   }
   ngOnDestroy(): void {
     this.subs.unsubscribe();

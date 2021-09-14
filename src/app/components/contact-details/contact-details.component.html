@@ -1,104 +1,104 @@
-<div
-  class="details-container"
-  *ngIf="this.contactSvc.contactDetails['image_url']"
->
-  <!-- contact main info -->
-  <div fxLayout="row" class="contact_info">
-    <img
-      src="{{ contactSvc.contactDetails['image_url'] }} "
-      class="contact_img"
-    />
+<!-- contact main info -->
+<div class="d-xs-block d-md-none mobile-back-btn">
+  <button (click)="backToContactsList()">
+    <span class="material-icons"> arrow_back </span>
+  </button>
+</div>
+<div fxLayout="row" class="contact_info">
+  <img
+    src="{{ contactSvc.contactDetails['image_url'] }} "
+    class="contact_img"
+  />
 
-    <div fxLayout="column" class="main-details">
-      <p class="name">
-        {{
-          contactSvc.contactDetails["firstName"] +
-            contactSvc.contactDetails["lastName"]
-        }}
-      </p>
-      <p class="profession">{{ contactSvc.contactDetails["profession"] }}</p>
+  <div fxLayout="column" class="main-details">
+    <p class="name">
+      {{
+        contactSvc.contactDetails["firstName"] +
+          contactSvc.contactDetails["lastName"]
+      }}
+    </p>
+    <p class="profession">{{ contactSvc.contactDetails["profession"] }}</p>
 
-      <div fxLayout="row" class="contact-btns" fxLayoutGap="5px">
-        <button
-          class="msg-btn"
-          fxLayout="row"
-          fxLayoutAlign="center center"
-          fxLayoutGap="5px"
-        >
-          <span class="material-icons">question_answer</span>
-          <span class="text"> Message </span>
-        </button>
-        <button><span class="material-icons"> call </span></button>
-        <button>
-          <span class="material-icons"> forward_to_inbox </span>
-        </button>
-        <button><span class="material-icons"> more_vert </span></button>
-      </div>
+    <div fxLayout="row" class="contact-btns" fxLayoutGap="5px">
+      <button
+        class="msg-btn"
+        fxLayout="row"
+        fxLayoutAlign="center center"
+        fxLayoutGap="5px"
+      >
+        <span class="material-icons">question_answer</span>
+        <span class="text"> Message </span>
+      </button>
+      <button><span class="material-icons"> call </span></button>
+      <button>
+        <span class="material-icons"> forward_to_inbox </span>
+      </button>
+      <button><span class="material-icons"> more_vert </span></button>
     </div>
   </div>
+</div>
 
-  <!-- more contact details -->
-  <div class="more-details">
-    <div class="margin-top-1">
-      <span class="sub-heading" fxFlex="15">Bio</span>
-      <p fxFlex="85">
-        {{ contactSvc.contactDetails["details"]["bio"] }}
-      </p>
-    </div>
+<!-- more contact details -->
+<div class="more-details">
+  <div class="margin-top-1">
+    <span class="sub-heading" fxFlex="15">Bio</span>
+    <p fxFlex="85">
+      {{ contactSvc.contactDetails["details"]["bio"] }}
+    </p>
+  </div>
 
-    <div class="margin-top-1">
-      <span class="sub-heading" fxFlex="15">Email</span>
-      <p fxFlex="70">
-        {{ contactSvc.contactDetails["details"]["email1"] }}
-      </p>
-      <div class="primary-chip" fxFlex="15">Primary</div>
-    </div>
+  <div class="margin-top-1">
+    <span class="sub-heading" fxFlex="15">Email</span>
+    <p fxFlex="70">
+      {{ contactSvc.contactDetails["details"]["email1"] }}
+    </p>
+    <div class="primary-chip" fxFlex="15">Primary</div>
+  </div>
 
-    <div>
-      <span fxFlex></span>
-      <p fxFlex="85">
-        {{ contactSvc.contactDetails["details"]["email2"] }}
-      </p>
-    </div>
+  <div>
+    <span fxFlex></span>
+    <p fxFlex="85">
+      {{ contactSvc.contactDetails["details"]["email2"] }}
+    </p>
+  </div>
 
-    <div class="margin-top-1">
-      <span class="sub-heading" fxFlex="15">Dial</span>
-      <p fxFlex="85">
-        {{ contactSvc.contactDetails["details"]["dial"] }}
-      </p>
-    </div>
+  <div class="margin-top-1">
+    <span class="sub-heading" fxFlex="15">Dial</span>
+    <p fxFlex="85">
+      {{ contactSvc.contactDetails["details"]["dial"] }}
+    </p>
+  </div>
 
-    <div class="margin-top-1">
-      <span class="sub-heading" fxFlex="15">Meeting</span>
-      <p fxFlex="85">
-        {{ contactSvc.contactDetails["details"]["meeting"] }}
-      </p>
-    </div>
+  <div class="margin-top-1">
+    <span class="sub-heading" fxFlex="15">Meeting</span>
+    <p fxFlex="85">
+      {{ contactSvc.contactDetails["details"]["meeting"] }}
+    </p>
+  </div>
 
-    <div class="margin-top-1">
-      <span class="sub-heading" fxFlex="15">Phone</span>
-      <p fxFlex="70">
-        {{ contactSvc.contactDetails["details"]["phone1"] }}
-      </p>
-      <div class="primary-chip" fxFlex="15">Primary</div>
-    </div>
+  <div class="margin-top-1">
+    <span class="sub-heading" fxFlex="15">Phone</span>
+    <p fxFlex="70">
+      {{ contactSvc.contactDetails["details"]["phone1"] }}
+    </p>
+    <div class="primary-chip" fxFlex="15">Primary</div>
+  </div>
 
-    <div>
-      <span fxFlex></span>
-      <p fxFlex="85">
-        {{ contactSvc.contactDetails["details"]["phone2"] }}
-      </p>
-    </div>
+  <div>
+    <span fxFlex></span>
+    <p fxFlex="85">
+      {{ contactSvc.contactDetails["details"]["phone2"] }}
+    </p>
+  </div>
 
-    <div class="margin-top-1">
-      <span class="sub-heading" fxFlex="15">Social</span>
-      <div fxFlex="85" class="social-links" fxLayoutGap="5px">
-        <button><i class="fa fa-facebook"></i></button>
-        <button><i class="fa fa-pinterest"></i></button>
-        <button><i class="fa fa-twitter"></i></button>
-        <button><i class="fa fa-linkedin"></i></button>
-        <button><i class="fa fa-google"></i></button>
-      </div>
+  <div class="margin-top-1">
+    <span class="sub-heading" fxFlex="15">Social</span>
+    <div fxFlex="85" class="social-links" fxLayoutGap="5px">
+      <button><i class="fa fa-facebook"></i></button>
+      <button><i class="fa fa-pinterest"></i></button>
+      <button><i class="fa fa-twitter"></i></button>
+      <button><i class="fa fa-linkedin"></i></button>
+      <button><i class="fa fa-google"></i></button>
     </div>
   </div>
 </div>

@@ -12,7 +12,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
 @NgModule({
   declarations: [AppComponent, ContactListComponent, ContactDetailsComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FlexLayoutModule,
     HttpClientModule,
